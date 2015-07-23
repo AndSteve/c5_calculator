@@ -65,6 +65,11 @@ span.allClear {
     text-align: center;
     font-size: 24px;
     box-shadow: 0 3px black;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
 }
 

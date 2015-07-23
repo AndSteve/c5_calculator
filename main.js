@@ -13,6 +13,7 @@ var arrayIndex = 0;
 $(document).ready(function() {
     //switch to determine input arrays
     $(".number").click(function() {
+        console.log('Current position in number array is: '+arrayIndex)
         operatorSelect = false;
         var inputvar = $("#result_display").val();
         switch (true) {
@@ -104,10 +105,9 @@ $(document).ready(function() {
                     break;
             }
             $("#result_display").val("");
-            //console.log($("#result_display").val());
-            arrayIndex++;
+            arrayIndex = 1;
             console.log('position in array index: '+arrayIndex);
-        }
+        }console.log('Operation called');
     });
 
     $(".plusmin").click(function() {
@@ -147,7 +147,7 @@ $(document).ready(function() {
                 console.log('ERROR');
         }
         if (results == Infinity) {
-            results = "ERROR: DOES NOT COMPUTE";
+            results = "Error: dividing by 0";
         }
         $("#result_display").val(results);
         console.log($("#result_display").val());
