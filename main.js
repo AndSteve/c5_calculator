@@ -66,40 +66,48 @@ $(document).ready(function() {
                     numArray[arrayIndex] = $("#result_display").val();
                     operatorSelect = true;
                     displayContent = "";
+                    console.log('Division called');
                     dividing = true;
-                    multiplying = subtracting = adding = false;
+                    multiplying = false;
+                    subtracting = false;
+                    adding = false;
                     break;
                 case $(this).hasClass('multiplication'):
                     numArray[arrayIndex] = $("#result_display").val();
                     operatorSelect = true;
                     displayContent = "";
+                    console.log('Multiplication called');
                     multiplying = true;
-                    dividing = subtracting = adding = false;
+                    dividing = false;
+                    subtracting = false;
+                    adding = false;
                     break;
                 case $(this).hasClass('subtraction'):
                     numArray[arrayIndex] = $("#result_display").val();
                     operatorSelect = true;
                     displayContent = "";
+                    console.log('Subtraction called');
                     subtracting = true;
-                    multiplying = dividing = adding = false;
+                    adding = false;
+                    multiplying = false;
+                    dividing = false;
                     break;
                 case $(this).hasClass('addition'):
                     numArray[arrayIndex] = $("#result_display").val();
                     operatorSelect = true;
                     displayContent = "";
+                    console.log('Addition called');
                     adding = true;
-                    multiplying = subtracting = dividing = false;
+                    multiplying = false;
+                    subtracting = false;
+                    dividing = false;
                     break;
             }
             $("#result_display").val("");
-            console.log($("#result_display").val());
+            //console.log($("#result_display").val());
             arrayIndex++;
             console.log('position in array index: '+arrayIndex);
         }
-    });
-
-    $(".exponential").click(function() {
-        $("#result_display").val(Math.pow($("#result_display").val(), 2));
     });
 
     $(".plusmin").click(function() {
@@ -144,7 +152,6 @@ $(document).ready(function() {
         $("#result_display").val(results);
         console.log($("#result_display").val());
         arrayIndex = 0;
-        console.log(evaluate);
     }
 
     $(".evaluate").click(function() {
