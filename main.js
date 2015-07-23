@@ -13,7 +13,7 @@ var arrayIndex = 0;
 $(document).ready(function() {
     //switch to determine input arrays
     $(".number").click(function() {
-        console.log('Current position in number array is: '+arrayIndex)
+        console.log('Current position in number array is: '+arrayIndex);
         operatorSelect = false;
         var inputvar = $("#result_display").val();
         switch (true) {
@@ -122,7 +122,11 @@ $(document).ready(function() {
         }
     });
 
-    //evaluate switch
+/*Comment*
+*Equals button will call evaluate function
+*function evaluate() takes value in numarray 0 and 1 and does math
+*
+*End Comment*/
     function evaluate() {
         numArray[arrayIndex] = $("#result_display").val();
         var results = "";
