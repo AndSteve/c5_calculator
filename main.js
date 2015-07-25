@@ -136,12 +136,25 @@ $(document).ready(function() {
         }
     });
     // supposed to be inserting a '-' infront of the current arrayIndex's value
+
     //DWP THIS ONE
+
     //Calls this function when the .plusmin class html element is clicked
+    $(".plusmin").click(function(){
+        
+        var plusmin = numArray.shift() * (-1);
+        numArray.unshift(plusmin.toString());
+        console.log("plusmin is being called",plusmin,numArray);
+    })
     //checks if the negative var is true then if the value in the current array slot is positive executes this block
     //concats a - into the front of the current array slot's value
     //sets the negative variable for any future calls to this function
     //if the first 'if' function was false this else statement slices out the first value in current array slot
+
+
+
+
+
     /********
      *Equals <span> on click event will call evaluate function
      *function evaluate() takes value in numarray 0 and 1 and does math
